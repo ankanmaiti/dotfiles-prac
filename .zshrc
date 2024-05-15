@@ -119,11 +119,11 @@ export LC_CTYPE=en_IN.utf8
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
+# *********************************************************************
 # setup neovim
 export PATH="$PATH:/opt/nvim/"
 export EDITOR=nvim
 
-# *********************************************************************
 # setup fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 eval "$(fzf --zsh)"
@@ -145,15 +145,17 @@ _fzf_compgen_path() {
 _fzf_compgen_dir() {
   fd --type=d --hidden --exclude .git . "$1"
 }
-# *********************************************************************
+
+
 # ----- Bat (better cat) -----
 export BAT_THEME=tokyonight_night
 alias cat="bat"
 
+
 # ---- Eza (better ls) -----
 # alias ls="exa --color=always --long --git --no-filesize --icons --no-time --no-user --no-permissions --tree --level=1"
 
-# *********************************************************************
+
 # ----- fzf + eza + bat -----
 export FZF_CTRL_T_OPTS="--preview 'bat -n --color=always --line-range :500 {}'"
 export FZF_ALT_C_OPTS="--preview 'exa --tree --color=always {} | head -200'"
@@ -172,13 +174,14 @@ _fzf_comprun() {
     *)            fzf --preview "bat -n --color=always --line-range :500 {}" "$@" ;;
   esac
 }
-# *********************************************************************
+
+
 ## History configuration
 HISTCONTROL=ignoreboth
 HISTSIZE=100
 SAVEHIST=500
 
-# *********************************************************************
+
 # tmux
 export PATH="$HOME/.tmuxifier/bin:$PATH"
 eval "$(tmuxifier init -)"
@@ -188,3 +191,10 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 
+# thefuck alias
+eval $(thefuck --alias)
+eval $(thefuck --alias fk)
+
+
+# better cd with zoxide
+eval "$(zoxide init zsh)"
