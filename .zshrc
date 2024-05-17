@@ -198,3 +198,4 @@ eval $(thefuck --alias fk)
 
 # better cd with zoxide
 eval "$(zoxide init zsh)"
+alias cd="z"
