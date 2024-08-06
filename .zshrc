@@ -192,10 +192,10 @@ export NVM_DIR="$HOME/.nvm"
 
 
 # thefuck alias
-eval $(thefuck --alias)
-eval $(thefuck --alias fk)
+# eval $(thefuck --alias)
+# eval $(thefuck --alias fk)
 
 
 # better cd with zoxide
 eval "$(zoxide init zsh)"
-alias cd="z"
+# alias cd="z"
