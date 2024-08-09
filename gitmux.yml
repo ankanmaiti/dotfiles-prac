@@ -35,7 +35,7 @@ tmux:
         clean: '#[fg=green,nobold]'
         insertions: '#[fg=green,nobold]'
         deletions: '#[fg=red,nobold]'
-    layout: [stats, flags, divergence, branch]
+    layout: [flags, divergence, branch]
     options:
         branch_max_len: 0
         branch_trim: right
