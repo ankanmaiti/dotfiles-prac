@@ -33,19 +33,10 @@ format =  '[$symbol$branch](bold gray) '
 symbol = " "
 
 [git_status]
-disabled = true
+disabled = false
 
 [lua]
-format = '[$symbol](bold purple)'
 symbol = " "
-
-[nodejs]
-format = '[$symbol](bold green)'
-symbol = " "
-
-[php]
-format = '[$symbol](bold 147)'
-symbol = " "
 
 
 
