@@ -15,7 +15,7 @@ tmux:
         behind: ↓       # 'behind count' when local and remote branch diverged.
         staged: ''     # count of files in the staging area.
         conflict: ''   # count of files in conflicts.
-        modified: '+'   # count of modified files.
+        modified: '*'   # count of modified files.
         untracked: '?'  # count of untracked files.
         stashed: '⚑'    # count of stash entries.
         insertions: Σ   # count of inserted lines (stats section).
